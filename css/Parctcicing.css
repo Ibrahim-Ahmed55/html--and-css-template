@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    background-color: #333;
+}
+.parent {
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.parent > .child {
+    width: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+@media (max-width: 400px) and (min-width: 200px) {
+    .parent > .child {
+        background-color: red;
+    }
+}

@@ -1,0 +1,314 @@
+/* variables */
+:root {
+    --bg-color:#eee;
+    --main-color:#10cab7;
+    --secondray-color:#2c4755;
+}
+/*end- variables */
+/* gloabal variables*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* small screens */
+@media (min-width: 767px) {
+    .container {
+        width: 750px;
+    }
+}
+/* medium screens */
+@media(min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large screens */
+@media(min-width: 1200px) {
+    .container { 
+        width: 1170px;
+    }
+}
+/* end-gloabal variables*/
+/* start-header */
+.header .container .logo {
+    width: 60px;
+}
+.header .container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .links {
+    position: relative;
+}
+.header .links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    top: -50px;
+    min-width: 50px; 
+    transition: 0.3s;
+    z-index: 1;
+}
+.header .links li {
+    padding: 15px;
+}
+.header .links li a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+.header .links li a:hover {
+    color: var(--main-color);
+}
+/* end-header */
+/* features */
+.landing {
+    background-image: url(../images/landing-1.jpg);
+    background-size: cover;
+    height: calc(100vh - 54px);
+    position: relative;
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    text-align: center;
+}
+.landing .intro-text h3 {
+    color: var(--main-color);
+    font-size: 30px;
+}
+.landing .intro-text p {
+    color: white;
+}
+.features {
+    background-color: #eee;
+}
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.features .container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.features .container .info {
+    text-align: center;
+}
+.features .container .info i {
+    font-size: 50px;
+    color: var(--main-color);
+}
+.features .container .info h3 {
+    font-weight: 800;
+}
+.features .container .info p {
+    font-weight: lighter;
+    line-height: 1.5;
+}
+/* end-features */
+/* start-services */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+}
+.special-heading + p {
+    text-align: center;
+    margin-top: -30px;
+}
+@media (max-width: 767px) {
+    .special-heading {
+    color: #ebeced;
+    font-size: 80px;
+    text-align: center;
+    margin: 0px;
+}
+}
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 20px 20px;
+    margin-top: 70px;
+}
+.services .services-content .col .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+.services .services-content .col .srv i {
+   flex-basis: 60px;
+    color: var(--main-color);
+    font-size: 40px;
+}
+.services .services-content .col .srv .text  {
+    flex: 1;
+}
+.services .services-content .col .srv .text h3 {
+    margin: 0;
+}
+.services .services-content .col .srv .text p {
+    color: #777;
+    font-size: 17px;
+}
+.image.image-column img{
+    width: 250px;
+    height: 250px;
+}
+.image.image-column {
+ position: relative;
+ width: 250px;
+ height: 250px;
+}
+.image.image-column::before {
+    content: "";
+    background-color: var(--secondray-color);
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 100px);
+    right: 0;
+    top: -50px;
+    z-index: -1;
+}
+@media (max-width: 767px) {
+    .services .services-content .col .srv {
+        text-align: center;
+        flex-direction: column;
+}
+}
+@media (max-width: 1197px) {
+    .image.image-column {
+    display: none;
+}
+}
+.col .image-2 {
+    width: 320px;
+    height: 200px;
+}
+.portfilo .container .portfilo-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px 30px ;
+    margin-top: 60px;
+}
+@media (max-width: 767px) {
+    .portfilo .container .portfilo-columns {
+        text-align: center;
+}
+}
+.portfilo .container .portfilo-columns .text  {
+    padding-left: 20px;
+}
+.portfilo .container .portfilo-columns .text h3  {
+    margin: 0;
+}
+.portfilo .container .portfilo-columns .text p  {
+    color: #777;
+    line-height: 1.6;
+}
+.btn  {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+.btn button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color: transparent;
+    font-weight: 800;
+}
+.about .container .col .card  {
+    width: 250px;
+    height: 200px;
+    position: relative;
+}
+.about .container .col .card img {
+  width: 100%;
+  height: 100%;
+}
+.about .container .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    margin-top: 150px;
+}
+.about .container .col .card::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: calc(100% + 100px);
+    background-color: var(--bg-color);
+    top: -50px;
+    z-index: -1;
+    left: -30px;
+}
+.about .container .col .card::before {
+ content: "";
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    right: -148px;
+    z-index: -1;
+    top: -58px;
+}
+.about .container .about-content .col .text {
+    padding: 25px;
+} 
+.about .container .about-content .col .text hr {
+    height: 1px;
+    background-color: var(--main-color);
+}
+.about .container .about-content .col .text p {
+  line-height: 1.6;
+  color: #777;
+  font-size: 17px;
+}
+@media(max-width:767px) {
+    .about .container .about-content {
+        text-align: center;
+    }
+    .about .container .col .card {
+        display: none;
+    }
+}
+.contact .container  {
+    margin-top: 100px;
+}
+.contact .container .contact-content h2 {
+    font-size: 60px;
+    color: var(--secondray-color);
+    margin-bottom: 0px;
+}
+.contact .container .contact-content h3 {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.contact .container .contact-content-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+}
+.contact .container .contact-content-1 .col i {
+    font-size: 40px;
+    padding-left: 15px;
+    color: var(--secondray-color);
+    cursor: pointer;
+}
